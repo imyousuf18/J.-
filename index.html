@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J. Junaid Jamshed</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="icon" href="https://www.junaidjamshed.com/media/favicon/stores/1/favicon_icon.jpg">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+    <script>
+        var cont = 0;
+
+        function loopSlider() {
+            var xx = setInterval(function() {
+                switch (cont) {
+                    case 0:
+                        {
+                            $("#slider-1").fadeOut(400);
+                            $("#slider-2").delay(400).fadeIn(400);
+                            $("#sButton1").removeClass("bg-purple-800");
+                            $("#sButton2").addClass("bg-purple-800");
+                            cont = 1;
+
+                            break;
+                        }
+                    case 1:
+                        {
+
+                            $("#slider-2").fadeOut(400);
+                            $("#slider-1").delay(400).fadeIn(400);
+                            $("#sButton2").removeClass("bg-purple-800");
+                            $("#sButton1").addClass("bg-purple-800");
+
+                            cont = 0;
+
+                            break;
+                        }
+
+
+                }
+            }, 8000);
+
+        }
+
+        function reinitLoop(time) {
+            clearInterval(xx);
+            setTimeout(loopSlider(), time);
+        }
+
+
+
+        function sliderButton1() {
+
+            $("#slider-2").fadeOut(400);
+            $("#slider-1").delay(400).fadeIn(400);
+            $("#sButton2").removeClass("bg-purple-800");
+            $("#sButton1").addClass("bg-purple-800");
+            reinitLoop(4000);
+            cont = 0
+
+        }
+
+        function sliderButton2() {
+            $("#slider-1").fadeOut(400);
+            $("#slider-2").delay(400).fadeIn(400);
+            $("#sButton1").removeClass("bg-purple-800");
+            $("#sButton2").addClass("bg-purple-800");
+            reinitLoop(4000);
+            cont = 1
+
+        }
+
+        $(window).ready(function() {
+            $("#slider-2").hide();
+            $("#sButton1").addClass("bg-purple-800");
+
+
+            loopSlider();
+
+
+
+
+
+
+        });
+    </script>
+
+
+</head>
+
+<body style="padding: 0%; margin: 0;">
+    <!--...................................... NAVBAR START..................................... -->
+
+    <!-- component -->
+    <!-- Dark Header component -->
+    <!-- Fontswesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js"></script>
+
+    <header class="text-gray-100 bg-white-900 body-font shadow w-full">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <nav class="flex lg:w-2/5 flex-wrap items-center text-base md:ml-auto">
+
+            </nav>
+            <a class="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center lg:items-center lg:justify-center mb-4 md:mb-0">
+                <img src="https://www.junaidjamshed.com/media/logo/stores/1/new_logo.png" style="height: 40px; margin-top: 10px; margin-bottom: 10px;" alt="logo">
+
+            </a>
+            <div class="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0">
+
+            </div>
+        </div>
+    </header>
+    <div class="bg-gray-400 font-sans leading-normal tracking-normal">
+
+        <nav class="flex items-center justify-between flex-wrap bg-white p-3 w-full z-10 top-0" style="padding-bottom: 0;">
+            <div class="flex items-center flex-shrink-0 text-white mr-6">
+
+            </div>
+
+            <div class="block lg:hidden">
+                <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-black border-black hover:text-black hover:border-black">
+<svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+</button>
+            </div>
+            <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block pt-6 lg:pt-0" id="nav-content">
+                <ul class="list-reset lg:flex justify-end flex-1 items-center" style="justify-content: center; font-weight: 600;">
+                    <li class="mr-3">
+                        <a class="inline-block text-black no-underline hover:text-gray-500  hover:font-bold  py-2 px-4" href="#" style="font-size: 20px;">NEW ARRIVALS</a>
+                    </li>
+                    <li class="mr-3">
+                        <a class="inline-block text-black no-underline hover:text-gray-500  hover:font-bold py-2 px-4" href="#">EXCLUSIVE COLLECTION</a>
+                    </li>
+                    <li class="mr-3">
+                        <a class="inline-block text-black no-underline hover:text-gray-500  hover:font-bold py-2 px-4" href="#">WOMEN</a>
+                    </li>
+                    <li class="mr-3">
+                        <a class="inline-block text-black no-underline hover:text-gray-500  hover:font-bold py-2 px-4" href="#">MEN</a>
+                    </li>
+                    <li class="mr-3">
+                        <a class="inline-block text-black no-underline hover:text-gray-500  hover:font-bold py-2 px-4" href="#">BOYS & GIRLS</a>
+                    </li>
+                    <li class="mr-3">
+                        <a class="inline-block text-black no-underline hover:text-gray-500  hover:font-bold py-2 px-4" href="#">MAKEUP</a>
+                    </li>
+                    <li class="mr-3">
+                        <a class="inline-block text-black no-underline hover:text-gray-500  hover:font-bold py-2 px-4" href="#">FRAGRANCES</a>
+                    </li>
+                    <li class="mr-3">
+                        <a class="inline-block text-black no-underline hover:text-gray-500  hover:font-bold py-2 px-4" href="#">CATALOGUE</a>
+                    </li>
+                    <li class="mr-3">
+                        <a class="inline-block text-black no-underline hover:text-gray-500  hover:font-bold py-2 px-4" href="#">SALE</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <script>
+            //Javascript to toggle the menu
+            document.getElementById('nav-toggle').onclick = function() {
+                document.getElementById("nav-content").classList.toggle("hidden");
+            }
+        </script>
+    </div>
+
+    <!--...................................... NAVBAR ENDS..................................... -->
+    <br>
+    <!----slider start---->
+    <div class="sliderAx h-auto">
+        <div id="slider-1" class="container mx-auto">
+            <div class="bg-cover bg-center  h-auto text-white py-24 px-10 object-fill " style="background-image: url(https://www.junaidjamshed.com/media/weltpixel/owlcarouselslider/images/b/a/banner_62.jpg); height: 700px;">
+                <div class="md:w-1/2">
+                    <p class="font-bold text-sm uppercase"></p>
+                    <p class="text-3xl font-bold"></p>
+                    <p class="text-2xl mb-10 leading-none"></p>
+
+                </div>
+            </div>
+            <br>
+        </div>
+
+        <div id="slider-2" class="container mx-auto">
+            <div class="bg-cover bg-top  h-auto text-white py-24 px-10 object-fill" style="background-image: url(https://www.junaidjamshed.com/media/weltpixel/owlcarouselslider/images/b/a/banner012.jpg); height: 700px;">
+                <p class="font-bold text-sm uppercase"></p>
+                <p class="text-3xl font-bold"></p>
+                <p class="text-2xl mb-10 leading-none"></p>
+
+
+            </div>
+            <br>
+        </div>
+    </div>
+    <div class="flex justify-between w-12 mx-auto pb-2">
+        <button id="sButton1" onclick="sliderButton1()" class="bg-purple-400 rounded-full w-4 pb-2 "></button>
+        <button id="sButton2" onclick="sliderButton2() " class="bg-purple-400 rounded-full w-4 p-2"></button>
+    </div>
+    <!----slider ends---->
+
+    <!----------------------------------------------Gallery start-------------------------------------->
+
+    <section class="text-gray-600 body-font" style="margin-bottom: 0; padding-bottom: 0;">
+        <div class="container px-5 py-24 mx-auto flex flex-wrap" style="padding-top: 0;">
+            <section class="text-gray-600 body-font">
+                <div class="container px-5 py-24 mx-auto flex flex-wrap" style="padding-top: 0;">
+                    <div class="flex relative pt-10 pb-20 sm:items-center md:w-2/3 mx-auto" style="width: inherit;">
+                        <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+                            <div class="flex-shrink-0 w-24 h-24 text-indigo-500 rounded-full inline-flex items-center justify-center">
+                                <img src="https://www.junaidjamshed.com/media/logo/stores/1/new_logo.png" alt="">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                </svg>
+                            </div>
+                            <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                                <p class="leading-relaxed">All types of clothing ranging from Stitched to Unstitched also from Men to Women & Boys to Girls also including Accessories as well as Makeup & Fragrances</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap md:-m-2 -m-1">
+                        <div class="flex flex-wrap w-1/2">
+                            <div class="md:p-2 p-1 w-1/2">
+                                <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://www.junaidjamshed.com/media/wysiwyg/ss3.jpg">
+                            </div>
+                            <div class="md:p-2 p-1 w-1/2">
+                                <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://www.junaidjamshed.com/media/wysiwyg/ss2.jpg">
+                            </div>
+                            <div class="md:p-2 p-1 w-full">
+                                <img alt="gallery" class="w-full h-full object-cover object-center block" src="https://www.junaidjamshed.com/media/wysiwyg/ss13.jpg">
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap w-1/2">
+                            <div class="md:p-2 p-1 w-full">
+                                <img alt="gallery" class="w-full h-full object-cover object-center block" src="https://www.junaidjamshed.com/media/wysiwyg/ss11.jpg">
+                            </div>
+                            <div class="md:p-2 p-1 w-1/2">
+                                <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://www.junaidjamshed.com/media/wysiwyg/ss5.jpg">
+                            </div>
+                            <div class="md:p-2 p-1 w-1/2">
+                                <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://www.junaidjamshed.com/media/wysiwyg/ss12.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+    <!----------------------------------------------Gallery end-------------------------------------->
+    <div class="flex flex-col justify-center" style="margin-bottom: 0%;">
+        <div class="relative flex flex-col md:flex-row md:space-x-5 space-y-3 md:space-y-0  shadow-lg p-3 max-w-xs md:max-w-3xl mx-auto border border-#FFF8ee bg-#FFF8ee" style="
+    border-width: 2rem; border-color: #FFF8ee; background-color:#FFF8ee ;">
+            <div class=" ">
+                <img src="https://www.junaidjamshed.com/media/wysiwyg/012.jpg" alt="J." />
+            </div>
+        </div>
+    </div>
+    <div>
+        <h1 style="text-align: center; font-weight: bold; font-size: 562%;">Sanitizer</h1>
+        <h4 style="text-align: center; font-weight: bold; font-size: 200%;">Shop Now</h4>
+    </div>
+    <!---------------cards start-------------->
+    <section class="text--600 body-font" style="padding-top: 0;">
+        <div class="container px-5 py-24 mx-auto" style="padding-top: 15px;">
+            <h1 style="text-align: center; font-weight: bold; font-size: 300%;">Boys & Girls</h1>
+
+            <div class="flex flex-wrap -m-4">
+                <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                    <a class="block relative h-48 rounded overflow-hidden" style="height: 50rem;">
+                        <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://www.junaidjamshed.com/media/wysiwyg/ss7.jpg">
+                    </a>
+
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                    <a class="block relative h-48 rounded overflow-hidden" style="height: 30rem;">
+                        <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://www.junaidjamshed.com/media/wysiwyg/ss10.jpg">
+                    </a>
+
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                    <a class="block relative h-48 rounded overflow-hidden" style="height: 30rem;">
+                        <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="	https://www.junaidjamshed.com/media/wysiwyg/ss8.jpg">
+                    </a>
+
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                    <a class="block relative h-48 rounded overflow-hidden" style="height: 30rem;">
+                        <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://www.junaidjamshed.com/media/wysiwyg/ss9.jpg">
+                    </a>
+
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!---------------cards end-------------->
+
+    <!-------------footer start--------------->
+
+    <footer class="text-gray-600 body-font" style="width: inherit;">
+        <div class="container px-5 py-0 mx-auto pb-0">
+            <div class="flex flex-wrap md:text-left text-center order-first">
+                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                    <h2 class="title-font font-medium text-black font-bold tracking-widest text-sm mb-3">NEED HELP?</h2>
+                    <nav class="list-none mb-10">
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800" href="#">+92 21 111 112 111 (9am - 10pm , Mon - Sat)</a>
+                        </li>
+                        <li class="pt-3">
+                            <a class="text-gray-600 hover:text-gray-800" href="#">eshop@junaidjamshed.com</a>
+                        </li>
+                    </nav>
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                    <h2 class="title-font font-medium text-black font-bold tracking-widest text-sm mb-3">CUSTOMER SERVICE</h2>
+                    <nav class="list-none mb-10">
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800" href="#">Contact Us</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800" href="#">Delivery & Orders</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800" href="#">Returns & Exchanges</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800" href="#">Terms & Conditions</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800" href="#">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800" href="#">Track My Order</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800" href="#">Payment Guide
+                      </a>
+                        </li>
+                    </nav>
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                    <h2 class="title-font font-medium text-black font-bold tracking-widest text-sm mb-3">COMPANY</h2>
+                    <nav class="list-none mb-10">
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800" href="#">About Us</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800" href="#">Careers</a>
+                        </li>
+                    </nav>
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                    <h1 class="heading-font font-medium text-black font-bold tracking-widest text-sm mb-3">FOLLOW US</h1>
+                    <div class="flex xl:flex-nowrap md:flex-nowrap lg:flex-wrap flex-wrap justify-center items-end md:justify-start">
+                        <div class="relative w-40 sm:w-auto xl:mr-4 lg:mr-0 sm:mr-4 mr-2">
+                            <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+                      <a class="text-gray-500" href="https://www.facebook.com/j.junaidjamshed">
+                          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                          </svg>
+                      </a>
+                      <a class="ml-3 text-gray-500" href="https://twitter.com/_JunaidJamshed">
+                          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                          </svg>
+                      </a>
+                      <a class="ml-3 text-gray-500" href="https://www.instagram.com/j.junaidjamshed/">
+                          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                          </svg>
+                      </a>
+                      <a class="ml-3 text-gray-500" href="https://www.linkedin.com/company/junaid-jamshed-private-limited/">
+                          <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                            <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                          </svg>
+                      </a>                        
+                      </span>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="">
+            <div class=" container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col mx-auto">
+                <a class="flex title-font items-center md:justify-start justify-center text-gray-900 w-10 ">
+                    <img src="https://www.junaidjamshed.com/media/logo/stores/1/new_logo.png " alt=" ">
+                    <path d=" "></path>
+                    </svg>
+                </a>
+                <p class="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4 ">© 2022 All Rights Reserved
+                    <a href="https://twitter.com/knyttneve " rel="noopener noreferrer " class="text-gray-600 ml-1 " target="_blank ">@knyttneve</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!--------------footer ends--------------->
+
+</body>
+
+</html>
